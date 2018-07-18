@@ -1,10 +1,14 @@
 @media (max-width: 1000px){
   .menu {
-    width: 33%;
+    width: 100%;
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 630px){
+  .main-container{
+    width: 100%;
+  }
+
   .menu {
     width: 100%;
   }
