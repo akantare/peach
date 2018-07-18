@@ -1,0 +1,11 @@
+@media (max-width: 1000px){
+  .menu {
+    width: 33%;
+  }
+}
+
+@media (max-width: 670px){
+  .menu {
+    width: 50%;
+  }
+}
