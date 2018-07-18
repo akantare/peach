@@ -1,0 +1,152 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Impact";
+  height: 100%
+}
+
+.clear{
+  clear: left;
+}
+
+a {
+  text-decoration:none;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  background-color:#0431B4;
+  opacity: 0.8;
+  position: fixed;
+  top:0
+  z-index:10;
+
+}
+
+.header-left {
+  float: left;
+}
+
+.peachlogo {
+  width: 100px;
+  margin: 10px;
+}
+
+.header-right a {
+  color: white;
+  float: right;
+  line-height: 80px;
+  padding: 0px 10px;
+  display: block;
+  transition: all 0.5s;
+}
+
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.top-wrapper{
+    padding: 180px 0 0 0;
+    background-image: url(img/peach_gaikan.jpg)  ;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+  }
+
+  .top-wrapper h1 ,h2,h3,p,a{
+    margin:0;
+    text-shadow: black 1px 1px 0px, black -1px 1px 0px,
+               black 1px -1px 0px, black -1px -1px 0px;
+  }
+
+.top-wrapper h1{
+  font-size: 50px;
+}
+
+.top-wrapper h3{
+  font-size: 25px;
+}
+
+  .introduce {
+    margin-top: 125px;
+    opacity: 0.9;
+  }
+
+.heading{
+  text-align: center;
+  background-color: white;
+  opacity: 0.8;
+
+}
+
+.menu-wrapper {
+  margin-top: 110px;
+
+}
+
+.menu{
+  float: left;
+  width:20%;
+}
+
+.btn{
+  font-size: 15px;
+  line-height: 1.5;
+  color: white;
+  display: inline-block;
+  opacity: 0.4;
+  border-radius: 4px;
+  text-align: center;
+  width:100%;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.whats_peach {
+  background-color: #FE2EF7;
+}
+
+.sagyou{
+  background-color: #58FAF4;
+}
+
+.custom{
+  background-color: #0000FF;
+}
+
+.race {
+  background-color: #81DAF5;
+}
+
+.ivents_touring{
+  background-color: #A9F5F2;
+}
+
+.soukoukai {
+  background-color: #084B8A;
+}
+
+.recomend {
+  background-color: #A9BCF5;
+}
+
+.bike_photos {
+  background-color: #0174DF;
+}
+
+.gannso {
+  background-color: #01DFD7;
+}
+
+.blog {
+  background-color: #8181F7;
+}
