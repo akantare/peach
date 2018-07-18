@@ -17,12 +17,12 @@ a {
 }
 
 header {
-  height: 80px;
+  height: 100px;
   width: 100%;
   background-color:#0431B4;
   opacity: 0.8;
   position: fixed;
-  top:0
+  top:0;
   z-index:10;
 
 }
@@ -32,14 +32,14 @@ header {
 }
 
 .peachlogo {
-  width: 100px;
+  width: 150px;
   margin: 10px;
 }
 
 .header-right a {
   color: white;
   float: right;
-  line-height: 80px;
+  line-height: 100px;
   padding: 0px 10px;
   display: block;
   transition: all 0.5s;
@@ -51,7 +51,7 @@ header {
 
 .top-wrapper{
     padding: 180px 0 0 0;
-    background-image: url(https://github.com/akantare/peach/blob/master/peach_gaikan.jpg?raw=true)  ;
+    background-image: url(img/peach_gaikan.jpg)  ;
     background-position: center center;
     background-size: cover;
     color: white;
@@ -67,17 +67,23 @@ header {
   }
 
 .top-wrapper h1{
-  font-size: 50px;
+  font-size: 80px;
 }
 
 .top-wrapper h3{
+  font-size: 40px;
+}
+
+.top-wrapper p{
   font-size: 25px;
 }
 
-  .introduce {
-    margin-top: 125px;
-    opacity: 0.9;
+.introduce {
+  margin-top: 125px;
+  opacity: 0.9;
   }
+
+
 
 .heading{
   text-align: center;
@@ -97,8 +103,8 @@ header {
 }
 
 .btn{
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 2.0;
   color: white;
   display: inline-block;
   opacity: 0.4;
@@ -108,7 +114,7 @@ header {
 }
 
 .btn:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .whats_peach {
@@ -150,3 +156,4 @@ header {
 .blog {
   background-color: #8181F7;
 }
+
