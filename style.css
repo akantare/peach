@@ -1,0 +1,693 @@
+@charset "UTF-8";
+
+/*Base
+------------------------------------------------------------*/
+html {
+  line-height: 1.6;
+  font-size: 10px ;
+  font-family: "Hiragino Kaku Gothic ProN";
+  /* max-width: 1600px; */
+}
+
+body{
+ position: relative;
+  right: 0;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  line-height: 1.6;
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 5px;
+}
+
+h4{
+  margin: 1rem;
+  padding: 1rem;
+  border-left: 1.3rem solid rgba(25,25,112, 0.5);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+/*Layout
+------------------------------------------------------------*/
+/*ラッパーエリアのスタイル  */
+.l-wrapper{
+  width: 100%;
+  position: relative;
+  background-attachment: fixed;
+  background-image: url(img/peach_pit.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.on-the-wrapper{
+  padding-top: 10rem;
+  background-color: rgba(25,25,112, 0.5);
+  position: relative;
+  z-index: 1;
+}
+/* ヘッダーのスタイル */
+.l-header {
+  width: 100%;
+  background-color: #191970;
+  display: flex;
+  position: fixed;
+  z-index: 2;
+  top:0;
+  left: 0;
+
+}
+/*ヘッダー内左側エリアのスタイル  */
+.l-header-left{
+  width:20%;
+  max-width: 20rem;
+}
+/* ヘッダー内右側エリアのスタイル */
+.l-header-right{
+  width:80%;
+  display: flex;
+  flex-direction: row-reverse;
+
+}
+
+.l-contents-area{
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*フッターエリアのスタイル  */
+.l-footer{
+  color:white;
+  background-color: #191970;
+  text-align: center;
+}
+
+.news-list a{
+  margin: 0;
+}
+
+/*module
+-------------------------------------------------------------*/
+/*ロゴ画像のスタイル  */
+.peach-logo{
+  width:90%;
+  margin: 10px;
+  max-width: 10rem;
+
+}
+/*注釈文のスタイル  */
+small{
+  font-size:0.5rem;
+  padding-top: 10px;
+  display: block;
+}
+/*スライドメニューのスタイル  */
+#slide_menu {
+  z-index: 5;
+  color:white;
+  position: relative;
+  background-attachment: fixed;
+  background-image: url(img/peach_pit.jpg);
+  background-position:left 27% top ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  right:-100%;
+  width: 100%;
+  height: 100%;
+ }
+
+.slide_menu_wrapper{
+  background-color: rgba(25,25,112, 0.5);
+  width: 100%;
+  height: 100%;
+}
+/*スライドメニューオン・オフボタンの共通スタイル  */
+#button,#button2{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  }
+/*スライドメニューオンボタンのスタイル  */
+#button{
+  display: block;
+  width: 15%;
+  height: 70%;
+  margin: 10px;
+}
+.icon-box{
+  width: 15%;
+  max-width: 5rem;
+  margin: 10px 5px;
+}
+.icon{
+  width: 100%;
+  max-width: 5rem;
+}
+.icon2{
+  width: 12%;
+  margin:10px;
+  float: right;
+
+}
+.clear{
+  clear: both;
+}
+
+#slide_menu a {
+  font-size: 3rem;
+}
+
+/* アコーディオンメニュー */
+.cp_menu {
+width: 100%;
+margin: 0 auto;
+padding: 0;
+}
+.cp_menu a {
+margin-left: 10px;
+color: #FFFFFF;
+border-top: :2px solid #FFFFFF;
+line-height: 1.6;
+font-size: 3rem;
+}
+
+.cp_menu label {
+font-size: 3rem;
+display: block;
+position: relative;
+line-height: 1.6;
+color: #ffffff;
+background: inherit;
+cursor: pointer;
+}
+/*メニュー項目の文字の後ろに▼を追加する  */
+.cp_menu label::before {
+position: absolute;
+content: '▼';
+color: #FFFFFF;
+right: 3em;
+}
+/*メニュー項目のチェックボックスをなくす  */
+.cp_menu input {
+display: none;
+}
+/* メニュー項目のUlのスタイル */
+.cp_menu ul {
+margin-left: 40px ;
+background: inherit;
+list-style: none;
+}
+/*チェックボックスにチェックがなかったらLiエリアを表示しない  */
+.cp_menu li {
+overflow-y: hidden;
+max-height: 0;
+transition: all 0.5s;
+}
+
+/* チェックボックスにチェックが入っていたらLiエリアを表示する */
+#cp_menu_bar1:checked ~ #link1 li,
+#cp_menu_bar2:checked ~ #link2 li {
+max-height: 4rem;
+/* opacity: 1; */
+}
+
+#slide_menu_query{
+  display:none;
+}
+
+
+.main-title{
+  display: block;
+  margin: 0 auto;
+  width:100%;
+  max-width: 500px;
+  padding: 2rem 0;
+
+}
+
+.title-palagraph-only{
+  max-width: 500px;
+  color: #FFFFFF;
+  padding:1rem 0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.scroll-guide{
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  display: block;
+  text-align:center;
+  padding: 5rem 0;
+}
+
+.card{
+  background-color: #FFFFFF;
+  padding: 1.2rem ;
+
+}
+
+/*リンクの位置調整*/
+.link-t-a {
+position: relative;
+top: -100px;
+display: block;
+}
+
+.card-title{
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  /* padding: 1rem 0; */
+}
+
+.card-content-area{
+  /* width:90%; */
+  margin: 0 auto;
+  background-color: #CCCCCC;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.card-content-area a{
+  color: #191970;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.news-list,.attention-p{
+  font-size: 1.5rem;
+  padding:1rem;
+}
+
+p{
+  margin: 0 auto;
+  font-size: 1.5rem;
+  padding:1rem 1rem;
+  width: calc(100% - 2rem);
+}
+
+.information{
+  padding:1rem 1rem;
+  width: 100%;
+}
+
+span{
+  font-weight:bold;
+}
+
+table{
+  width: 100%;
+}
+
+th{
+  font-weight: bold;
+  background-color: rgba(65,105,225,0.6)
+
+}
+
+th,td{
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  padding:0.5rem 0;
+  border: 1px solid #FFFFFF;
+}
+
+iframe{
+  padding: 1rem;
+  width :calc(100% - 2rem);
+  height: 25rem;
+}
+
+.card-a{
+  cursor: pointer;
+  display: block;
+  margin: 0 ;
+  padding: 1rem;
+  color: #191970;
+  font-weight: bold;
+
+}
+
+.card-img{
+  padding: 1rem 1rem 1rem 1rem;
+  width: calc(100% - 2rem);
+  border-radius: 3px;
+
+}
+
+.touring_background{
+  background-image: url(img\gallery\touring\20180714\sinngoumati.jpg);
+}
+
+.page-title{
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  padding:3rem 0;}
+
+
+
+.year{
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: center;
+  background-color:  rgba(25,25,112, 0.5);
+  border-bottom: solid 1px #ffffff;
+
+}
+
+.title{
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: center;
+  background-color:  rgba(25,25,112, 0.5);
+  border-bottom: solid 1px #ffffff;
+
+}
+
+/* 以下アコーディオン実装 */
+.accordion{
+  padding: 0px;
+}
+.displayNone {
+display: none;
+}
+
+.switch {
+cursor:pointer;
+font-weight: bold;
+padding:10px 40px 10px 10px;
+font-size: 2rem;
+background: inherit;
+border-bottom: 1px solid #ffffff;
+position: relative;
+}
+
+/*矢印が×に代わる  */
+.switch:after {
+position: absolute;
+top: 60%;
+right: 10px;
+margin-top: -18px;
+content: '>';
+font-size: 2rem;
+font-weight: bold;
+-moz-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+-webkit-transform: rotate(90deg);
+transform: rotate(90deg);
+-moz-transition: all, 0.25s, linear;
+-o-transition: all, 0.25s, linear;
+-webkit-transition: all, 0.25s, linear;
+transition: all, 0.25s, linear;
+font-family: sans-serif;
+color: black;
+}
+.switch.open:after {
+-moz-transform: translate(0, 50%);
+-ms-transform: translate(0, 50%);
+-webkit-transform: translate(0, 50%);
+transform: translate(0, 50%);
+-moz-transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+-webkit-transform: rotate(-90deg);
+transform: rotate(-90deg);
+font-family: sans-serif;
+}
+/*ここまでアコーディオンのスタイル  */
+
+
+
+/*gallery_tab_simpleのタブスタイル  */
+.ChangeElem_Btn{
+  position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    border-style: none;
+    width: 32.481%;
+    height: 50px;
+    /* color: #00BCD4; */
+    /* background: #ECECEC; */
+    transition: .4s;
+    margin-bottom: 0.5rem;
+}
+
+.ChangeElem_Btn2{
+  position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    border-style: none;
+    width: 19%;
+    /* color: #00BCD4; */
+    /* background: #ECECEC; */
+    transition: .4s;
+}
+.ChangeElem_Panel{
+  display: none;
+}
+
+
+.title span {
+  color: #ffff00;
+}
+
+
+.ivents-card{
+  margin: 10px;
+  display: flex;
+  padding: 0 0 0 5px;
+}
+
+.ivents-card p{
+  font-weight: bold;
+  color: #191970;
+  padding: 0 5px;
+}
+
+.ivents-img{
+  border-radius: 3px;
+  width:100px;
+  height: 80px;
+}
+
+.ivents-card span{
+  color: black;
+  font-weight: lighter;
+}
+
+.card small{
+  text-align: right;
+}
+
+.ivents_img_box_query{
+  display: block;
+}
+
+.ivents-img-box{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ivents-img-box .card-img{
+  width: calc(50% - 2rem);
+  height: 30%;
+}
+
+.ivents-img-box p{
+  display: block;
+  width: calc(50% - 2rem);
+  height: 30%;
+}
+
+
+.pagetop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right:5px;
+}
+.pagetop a {
+    float: right;
+    width: 18px;
+    display: inline;
+    background-color: #ccc;
+    text-align: center;
+    color: #808080;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 5px 10px;
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+.pagetop a:hover {
+    display: inline;
+    background-color: #b2d1fb;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    padding:5px 10px;
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+/* ページ内リンクのスタイル */
+.page_link{
+  margin: 1rem;
+  padding: 1rem;
+  background-color:  rgba(25,25,112, 0.5);
+  border-radius:8px;
+  width: calc(10  0% - 2rem);
+  text-align: center;
+
+}
+
+.page_link p{
+  color: #FFFFFF;
+}
+
+
+
+
+
+/* 画面幅700px以上のスタイル */
+@media screen and (min-width:700px) {
+
+  .page-title{
+    font-size:8rem;
+  }
+
+  .card-title{
+    font-size:2rem;
+  }
+
+  .menu_and_card{
+    display: flex;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .title-palagraph-only{
+    font-size: 1.8rem;
+  }
+
+ a{
+   font-size: 1.8rem;
+
+ }
+
+ p {
+   font-size: 1.8rem;
+ }
+
+  #slide_menu_query{
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 8rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: rgba(25,25,112, 0.5);
+  }
+
+.slide_menu_wrapper{
+  width: 100%;
+}
+
+#slide_menu_query a{
+  font-size: 2.5rem;
+  line-height: 1.6;
+
+}
+
+#button{
+  display: none;
+}
+
+  .scroll-guide{
+    /* display: none/; */
+   }
+
+  .card{
+    margin-bottom: 10rem ;
+    width: 70%;
+    position: relative;
+    z-index: 1;
+    top:0;
+    margin: auto;
+
+
+  }
+
+
+.card a {
+  color: #191970;
+  font-weight: bold;
+}
+
+.ivents_img_box_query{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ivents_img_box_query .card-img{
+  width: calc(50% - 2rem);
+  height: 30%;
+}
+
+.ivents_img_box_query p{
+  width: calc(50% - 2rem);
+  height: 30%;
+}
+
+.ivents_img_box_query .ivents_img_box_query_half_box{
+  width: calc(50% - 2rem);
+  height: 30%;
+}
+
+.ivents_img_box_query_half_box .card-img{
+  width: 100%;
+}
+
+.ivents_img_box_query_half_box p{
+  width: 100%;
+}
+
+}
+/*State
+-------------------------------------------------------------*/
+
+
+/*theme
+--------------------------------------------------------------*/
